@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .screen-leva {
+    background-image: url("./assets/images/mobile-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .screen-leva .logo img {
+    margin: -1rem;
+  }
+  .screen-leva .logo-header {
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+  }
+  .screen-leva .desktop-content {
+    display: none;
+  }
+  .mobile-clouds {
+    position: relative;
+    bottom: 3rem;
+  }
+  .mobile-clouds img {
+    width: 100%;
+  }
+  .screen-prava {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    padding: 1rem;
+    position: relative;
+    top: -3rem;
+  }
+  .screen-prava .header {
+    font-size: 3vh;
+    font-weight: bold;
+  }
+  .screen-prava form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .screen-prava form .input {
+    margin-top: 2rem;
+    position: relative;
+  }
+  .screen-prava form .input label {
+    margin: 0;
+    padding: 0;
+    color: lightgray;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 0.5rem;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  .screen-prava form .input input:focus + label {
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+    font-size: 0.5rem;
+  }
+  .screen-prava form input[type=text], .screen-prava form input[type=password] {
+    width: 100%;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+  }
+  .screen-prava form .rectangle {
+    width: 100%;
+  }
+  .screen-prava form input[type=submit] {
+    margin: 2rem;
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F54EA2), to(#FF7676));
+    background-image: linear-gradient(180deg, #F54EA2 0%, #FF7676 100%);
+    border-radius: 30px;
+  }
+  .screen-prava .footer {
+    text-align: center;
+    position: relative;
+    top: -1rem;
+  }
+  .screen-prava .footer a {
+    color: black;
+  }
+  ::-webkit-input-placeholder {
+    color: lightgray;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0.5rem;
+  }
+  :-ms-input-placeholder {
+    color: lightgray;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0.5rem;
+  }
+  ::-ms-input-placeholder {
+    color: lightgray;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0.5rem;
+  }
+  ::placeholder {
+    color: lightgray;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("./assets/images/desktop-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main {
+    -webkit-box-shadow: 10px 10px 50px 11px rgba(0, 0, 0, 0.25);
+            box-shadow: 10px 10px 50px 11px rgba(0, 0, 0, 0.25);
+    width: 70%;
+    min-height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    border-radius: 30px;
+  }
+  .screen-leva {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    background-image: url("./assets/images/leva-strana-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .screen-leva .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .screen-leva .logo img {
+    width: 7.5rem;
+    margin: 1rem;
+  }
+  .screen-leva .logo .logo-header {
+    color: white;
+    font-size: 3rem;
+  }
+  .screen-leva .desktop-content {
+    margin: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .screen-leva .desktop-content p {
+    color: white;
+    width: 20rem;
+    margin: 2rem;
+  }
+  .screen-prava {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%;
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .screen-prava .header {
+    font-size: 3rem;
+    margin: 2rem;
+    font-weight: bold;
+  }
+  .screen-prava form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    margin: 1rem;
+  }
+  .screen-prava .input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    width: 90%;
+    margin: 1rem;
+    position: relative;
+  }
+  .screen-prava .input label {
+    margin: 0;
+    padding: 0;
+    color: lightgray;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 0.5rem;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  .screen-prava .input input:focus + label {
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+    font-size: 0.5rem;
+  }
+  .screen-prava input[type=text], .screen-prava input[type=password] {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+  }
+  .screen-prava input[type=submit] {
+    margin: 2rem;
+    padding: 1rem;
+    width: 80%;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F54EA2), to(#FF7676));
+    background-image: linear-gradient(180deg, #F54EA2 0%, #FF7676 100%);
+  }
+  .screen-prava input[type=submit]:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .screen-prava input[type=submit]:active {
+    opacity: 0.8;
+  }
+  .screen-prava .footer {
+    text-align: center;
+  }
+  .screen-prava .footer a {
+    color: black;
+  }
+  .mobile-clouds {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
