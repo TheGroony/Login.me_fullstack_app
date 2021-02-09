@@ -24,21 +24,46 @@
              <img src="./assets/images/cloud-divider.png" alt="clouds divider">
          </section>
          <section class="screen-prava">
-             <p class="header">Přihlášení</p>
-                 <form action="" class="login-form">
+             <p class="header loginHeader">Přihlášení</p>
+             <p class="header registerHeader">Registrace</p>
+                 <form action="" class="login-form loginForm">
                      <div class="input">
-                        <input type="text" name="email" class="inputEmail">
-                        <label for="email" class="labelEmail">E-mailová adresa</label>
+                        <input type="text" name="email" class="inputEmail inputClass">
+                        <label for="email" class="labelEmail label">E-mailová adresa</label>
                         <img src="./assets/images/rectangle.png" class="rectangle">
                      </div>
                       <div class="input">
-                        <input type="password" name="heslo" class="inputHeslo">
-                        <label for="heslo" class="labelHeslo">Heslo</label>
+                        <input type="password" name="heslo" class="inputHeslo inputClass">
+                        <label for="heslo" class="labelHeslo label">Heslo</label>
                         <img src="./assets/images/rectangle.png" class="rectangle">
                       </div>
                       <input type="submit" value="Přihlásit se">
                  </form>
-            <p class="footer">Nemáte účet? <a href="">Zaregistrovat se.</a></p>
+                 <form action="" class="login-form registerForm">
+                    <div class="input">
+                       <input type="text" name="jmeno" class="inputJmeno inputClass">
+                       <label for="jmeno" class="labelJmeno label">Jméno</label>
+                       <img src="./assets/images/rectangle.png" class="rectangle">
+                    </div>
+                    <div class="input">
+                        <input type="text" name="email" class="inputEmail inputClass">
+                        <label for="email" class="labelEmail label">E-mailová adresa</label>
+                        <img src="./assets/images/rectangle.png" class="rectangle">
+                     </div>
+                     <div class="input">
+                       <input type="password" name="heslo" class="inputHeslo inputClass">
+                       <label for="heslo" class="labelHeslo label">Heslo</label>
+                       <img src="./assets/images/rectangle.png" class="rectangle">
+                     </div>
+                     <div class="input">
+                        <input type="password" name="hesloZnovu" class="inputHesloZnovu inputClass">
+                        <label for="hesloZnovu" class="labelHesloZnovu label">Heslo znovu</label>
+                        <img src="./assets/images/rectangle.png" class="rectangle">
+                      </div>
+                     <input type="submit" value="Zaregistrovat se">
+                </form>
+            <p class="footer loginHeader">Nemáte účet? <span class="register">Zaregistrovat se.</span></p>
+            <p class="footer registerHeader">Již máte účet? <span class="register">Přihlásit se.</span></p>
          </section>
      </main>
 </body>

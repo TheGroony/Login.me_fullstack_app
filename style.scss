@@ -25,6 +25,7 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
        flex-flow: row wrap;
        justify-content: center;
        align-items: center;
+       transition: all 0.75s ease-in-out;
 
        .logo img{
           margin: -1rem; 
@@ -41,13 +42,27 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
        }
     }
 
+
+
     .mobile-clouds {
         position: relative;
         bottom: 3rem;
+        transition: all 0.75s ease-in-out;
         img {
             width: 100%;
         }
     }
+
+    .registerCloud{
+        transform: rotate(180deg);
+        bottom: -5%;
+     }
+
+    .switchRegistrationColor {
+        transform: translate3d(0, 101%, 0);
+        
+     }
+  
     
     .screen-prava {
         display: flex;
@@ -55,9 +70,26 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
         padding: 1rem;
         position: relative;
         top: -3rem;
+        transition: all 0.75s ease-in-out;
         .header {
             font-size: 3vh;
             font-weight: bold;
+        }
+        .registerHeader {
+            display: none;
+        }
+        .loginHeader {
+            display: block;
+        }
+        .loginForm {
+            display: inline-block;
+        }
+        .registerForm {
+            display: none;
+        }
+        .register {
+            cursor: pointer;
+            text-decoration: underline;
         }
         form {
             display: flex;
@@ -79,12 +111,11 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
                       transition: all 0.2s ease-in-out;
                       pointer-events: none;
                 }
-                input {
-                    &:focus + label{
-                      transform: translate3d(0,-30px,0);
-                      font-size: 0.5rem;
-                    }
-                }
+                .offset {
+                    transform: translate3d(0,-30px,0);
+                    font-size: 0.5rem;
+                }  
+               
             }
             input[type=text], input[type=password] {
                 width: 100%;
@@ -97,7 +128,7 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
             }
             input[type=submit] {
                 margin: 2rem;
-                width: 100%;
+                width: 80%;
                 font-size: 1.25rem;
                 padding: 1rem;
                 outline: none;
@@ -105,6 +136,13 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
                 color: white;
                 background-image: linear-gradient(180deg, #F54EA2 0%, #FF7676 100%);
                 border-radius: 30px;
+                &:hover {
+                    opacity: 0.9;
+                    cursor: pointer;
+                }
+                &:active {
+                    opacity: 0.8;
+                }
             }
         }
         .footer {
@@ -117,6 +155,22 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
         }
     }
 
+    .switchRegistrationWhite {
+        transform: translate3d(0,-90%,0);
+        background-color: white;
+        .loginHeader {
+            display: none;
+        }
+        .registerHeader {
+            display: block;
+        }
+        .loginForm {
+            display: none;
+        }
+        .registerForm {
+            display: inline-block;
+        }
+
     ::placeholder {
         color: lightgray;
         font-size: 1rem;
@@ -124,6 +178,7 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
         bottom: 0.5rem;
     }
     
+} 
 }
 
 @media only screen and (min-width:600px) {
@@ -154,6 +209,7 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: all 0.75s ease-in-out;
         .logo {
             display: flex;
             align-items: center;
@@ -183,15 +239,37 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
         }
     }
 
+    .switchRegistrationColor {
+       transform: translate3d(82%, 0, 0);
+       border-top-left-radius: 0px;
+       border-bottom-left-radius: 0px;
+       border-top-right-radius: 30px;
+       border-bottom-right-radius: 30px;
+    }
+
     .screen-prava {
+        transform: translate3d(0,0,0);
         flex: 1 0 40%;
         background-color: white;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
+        transition: all 0.75s ease-in-out;
+        .registerHeader {
+            display: none;
+        }
+        .loginHeader {
+            display: block;
+        }
         .header {
             font-size: 3rem;
             margin: 2rem;
             font-weight: bold;
+        }
+        .loginForm {
+            display: inline-block;
+        }
+        .registerForm {
+            display: none;
         }
         form {
             display: flex;
@@ -256,6 +334,32 @@ $bg-screen-leva: "./assets/images/leva-strana-bg.png";
            a {
                color: black;
            }
+           .register {
+               cursor: pointer;
+               text-decoration: underline;
+           }
+        }
+
+    
+    }
+
+    .switchRegistrationWhite {
+        transform: translate3d(-122%,0,0);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        .loginHeader {
+            display: none;
+        }
+        .registerHeader {
+            display: block;
+        }
+        .loginForm {
+            display: none;
+        }
+        .registerForm {
+            display: inline-block;
         }
     }
 

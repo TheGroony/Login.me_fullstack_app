@@ -35,6 +35,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
   }
   .screen-leva .logo img {
     margin: -1rem;
@@ -50,9 +52,20 @@
   .mobile-clouds {
     position: relative;
     bottom: 3rem;
+    -webkit-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
   }
   .mobile-clouds img {
     width: 100%;
+  }
+  .registerCloud {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    bottom: -5%;
+  }
+  .switchRegistrationColor {
+    -webkit-transform: translate3d(0, 101%, 0);
+            transform: translate3d(0, 101%, 0);
   }
   .screen-prava {
     display: -webkit-box;
@@ -65,10 +78,28 @@
     padding: 1rem;
     position: relative;
     top: -3rem;
+    -webkit-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
   }
   .screen-prava .header {
     font-size: 3vh;
     font-weight: bold;
+  }
+  .screen-prava .registerHeader {
+    display: none;
+  }
+  .screen-prava .loginHeader {
+    display: block;
+  }
+  .screen-prava .loginForm {
+    display: inline-block;
+  }
+  .screen-prava .registerForm {
+    display: none;
+  }
+  .screen-prava .register {
+    cursor: pointer;
+    text-decoration: underline;
   }
   .screen-prava form {
     display: -webkit-box;
@@ -103,7 +134,7 @@
     transition: all 0.2s ease-in-out;
     pointer-events: none;
   }
-  .screen-prava form .input input:focus + label {
+  .screen-prava form .input .offset {
     -webkit-transform: translate3d(0, -30px, 0);
             transform: translate3d(0, -30px, 0);
     font-size: 0.5rem;
@@ -119,7 +150,7 @@
   }
   .screen-prava form input[type=submit] {
     margin: 2rem;
-    width: 100%;
+    width: 80%;
     font-size: 1.25rem;
     padding: 1rem;
     outline: none;
@@ -129,6 +160,13 @@
     background-image: linear-gradient(180deg, #F54EA2 0%, #FF7676 100%);
     border-radius: 30px;
   }
+  .screen-prava form input[type=submit]:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .screen-prava form input[type=submit]:active {
+    opacity: 0.8;
+  }
   .screen-prava .footer {
     text-align: center;
     position: relative;
@@ -137,25 +175,42 @@
   .screen-prava .footer a {
     color: black;
   }
-  ::-webkit-input-placeholder {
+  .switchRegistrationWhite {
+    -webkit-transform: translate3d(0, -90%, 0);
+            transform: translate3d(0, -90%, 0);
+    background-color: white;
+  }
+  .switchRegistrationWhite .loginHeader {
+    display: none;
+  }
+  .switchRegistrationWhite .registerHeader {
+    display: block;
+  }
+  .switchRegistrationWhite .loginForm {
+    display: none;
+  }
+  .switchRegistrationWhite .registerForm {
+    display: inline-block;
+  }
+  .switchRegistrationWhite ::-webkit-input-placeholder {
     color: lightgray;
     font-size: 1rem;
     position: relative;
     bottom: 0.5rem;
   }
-  :-ms-input-placeholder {
+  .switchRegistrationWhite :-ms-input-placeholder {
     color: lightgray;
     font-size: 1rem;
     position: relative;
     bottom: 0.5rem;
   }
-  ::-ms-input-placeholder {
+  .switchRegistrationWhite ::-ms-input-placeholder {
     color: lightgray;
     font-size: 1rem;
     position: relative;
     bottom: 0.5rem;
   }
-  ::placeholder {
+  .switchRegistrationWhite ::placeholder {
     color: lightgray;
     font-size: 1rem;
     position: relative;
@@ -207,6 +262,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
   }
   .screen-leva .logo {
     display: -webkit-box;
@@ -245,18 +302,42 @@
     width: 20rem;
     margin: 2rem;
   }
+  .switchRegistrationColor {
+    -webkit-transform: translate3d(82%, 0, 0);
+            transform: translate3d(82%, 0, 0);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
   .screen-prava {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     -webkit-box-flex: 1;
         -ms-flex: 1 0 40%;
             flex: 1 0 40%;
     background-color: white;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    -webkit-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
+  }
+  .screen-prava .registerHeader {
+    display: none;
+  }
+  .screen-prava .loginHeader {
+    display: block;
   }
   .screen-prava .header {
     font-size: 3rem;
     margin: 2rem;
     font-weight: bold;
+  }
+  .screen-prava .loginForm {
+    display: inline-block;
+  }
+  .screen-prava .registerForm {
+    display: none;
   }
   .screen-prava form {
     display: -webkit-box;
@@ -338,6 +419,30 @@
   }
   .screen-prava .footer a {
     color: black;
+  }
+  .screen-prava .footer .register {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .switchRegistrationWhite {
+    -webkit-transform: translate3d(-122%, 0, 0);
+            transform: translate3d(-122%, 0, 0);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .switchRegistrationWhite .loginHeader {
+    display: none;
+  }
+  .switchRegistrationWhite .registerHeader {
+    display: block;
+  }
+  .switchRegistrationWhite .loginForm {
+    display: none;
+  }
+  .switchRegistrationWhite .registerForm {
+    display: inline-block;
   }
   .mobile-clouds {
     display: none;
